@@ -127,7 +127,7 @@ def render_ui():
                     cached_image = load_pokemon_image(image_path)
                     
                     if cached_image:
-                        st.image(cached_image, use_container_width=True)
+                        st.image(cached_image, use_column_width=True)
                     else:
                         st.warning("이미지 파일을 찾을 수 없습니다.")
                 
