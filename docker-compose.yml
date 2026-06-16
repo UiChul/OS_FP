@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./back
+    container_name: persona_back
+    ports:
+      - "8000:8000"
+    restart: always
+
+  frontend:
+    build: ./front
+    container_name: persona_front
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    restart: always
